@@ -25,7 +25,7 @@ public class Reference
     {
         if (_endVerse == null)
         {
-            Console.WriteLine($"{ _book} {_chapter}: {_verse}");
+            Console.WriteLine($"{ _book} {_chapter}:{_verse}");
             return;
         }
         Console.WriteLine($"{_book} {_chapter}: {_verse}-{_endVerse}");

@@ -16,8 +16,8 @@ class Program
 
         while (true)
         {
-            Console.WriteLine("---------- Welcome to Scripture Memorizer ----------"); 
-            Console.WriteLine("Please enter the scripture reference, followed by the verse you would like to memorize.");
+            Console.WriteLine("--------------- Welcome to Scripture Memorizer ---------------"); 
+            Console.WriteLine("Please enter the scripture reference, followed by the verse you would like to memorize ^_^");
             Console.WriteLine("");
 
             Console.Write("> Book Name: ");
@@ -50,11 +50,11 @@ class Program
             while (true)
             {
                 scripture.Display();
-                Console.Write("\n> Please type QUIT to exit, or press enter to continue memorizing: ");
+                Console.Write("\n> Please type QUIT to exit or press enter to continue memorizing: ");
                 input = Console.ReadLine();
                 if (input.ToUpper() == "QUIT" || scripture.AreWordsHidden())
                 {
-                    Console.Write("--- Thank you for using my Scripture Memorizer! Until next time ^^ ---");
+                    Console.Write("----- Thank you for using my Scripture Memorizer! Until next time ^^ -----");
                     return;
                 }
                 scripture.HideWords();
