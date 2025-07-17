@@ -5,28 +5,27 @@ public class Scripture
     private string[] tempString;
     private static Random randomNum = new Random();
     private int numb;
-
     public Scripture(Reference reference, string verse)
     {
         this._reference = reference;
         this._excerpt = new List<Word>();
         tempString = verse.Split(" ");
+        
         foreach (string word in tempString)
         {
             this._excerpt.Add(new Word(word));
         }
     }
-
     public void Display()
     {
         Console.Clear();
         _reference.Display();
+
         foreach (Word value in _excerpt)
         {
             value.Display();
         }
     }
-
     public void HideWords()
     {
         foreach (Word value in _excerpt)
@@ -35,6 +34,7 @@ public class Scripture
             {
                 continue;
             }
+
             numb = randomNum.Next(0, 2);
             if (numb == 1)
             {
@@ -42,7 +42,6 @@ public class Scripture
             }
         }
     }
-
     public bool AreWordsHidden()
     {
         var list = _excerpt.ConvertAll(item => item.GetVisibility());
@@ -61,5 +60,4 @@ public class Scripture
         }
         return false;
     }
-
 }

@@ -1,11 +1,9 @@
 public class Reference
 {
-
     private string _book;
     private int _chapter;
     private int _verse;
     private int? _endVerse;
-
     public Reference(string book, int chapter, int verse)
     {
         this._book = book;
@@ -20,7 +18,6 @@ public class Reference
         this._verse = verse;
         this._endVerse = endVerse;
     }
-
     public void Display()
     {
         if (_endVerse == null)

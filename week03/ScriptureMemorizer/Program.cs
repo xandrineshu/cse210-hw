@@ -33,6 +33,7 @@ class Program
                 verse = int.Parse(temp[0]);
                 endVerse = int.Parse(temp[1]);
                 refer = new Reference(name, chapter, verse, endVerse);
+                
                 for (int num = verse; num <= endVerse; num++)
                 {
                     Console.Write($"> Please enter verse {num}'s text: ");
@@ -47,19 +48,21 @@ class Program
                 excerpt = Console.ReadLine() + '\n';
             }
             scripture = new Scripture(refer, excerpt);
+
             while (true)
             {
                 scripture.Display();
                 Console.Write("\n> Please type QUIT to exit or press enter to continue memorizing: ");
                 input = Console.ReadLine();
+
                 if (input.ToUpper() == "QUIT" || scripture.AreWordsHidden())
                 {
                     Console.Write("----- Thank you for using my Scripture Memorizer! Until next time ^^ -----");
                     return;
                 }
+
                 scripture.HideWords();
             }
-
         }
     }
 }
