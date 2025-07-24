@@ -15,13 +15,13 @@ public class Customer
     public double GetShippingCost()
     {
         double shippingCost;
-        if (_address.GetCountry() == "Philippines")
+        if (_address.GetCountry() == "USA")
         {
-            shippingCost = 100;
+            shippingCost = 5;
         }
         else
         {
-            shippingCost = 300;
+            shippingCost = 35;
         }
         return shippingCost;
     }

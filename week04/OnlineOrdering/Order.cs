@@ -35,9 +35,10 @@ public class Order
 
     public void DisplayCosts(double subtotal, double shippingCost, double totalCost)
     {
-        Console.WriteLine($"Subtotal: P{subtotal}");
-        Console.WriteLine($"Shipping: P{shippingCost}");
-        Console.WriteLine($"Total: P{totalCost}");
+        Console.WriteLine("< Total Label >");
+        Console.WriteLine($"Subtotal: ${subtotal}");
+        Console.WriteLine($"Shipping: ${shippingCost}");
+        Console.WriteLine($"Total: ${totalCost}");
         Console.WriteLine("");
     }
 

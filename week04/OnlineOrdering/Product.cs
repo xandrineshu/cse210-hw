@@ -22,6 +22,6 @@ public class Product
 
     public void DisplayProductDetails()
     {
-        Console.WriteLine($"- {_name} ({_id}) => Total: P{CalculatePrice()}");
+        Console.WriteLine($"- {_name} ({_id}) => Total: ${CalculatePrice()}");
     }
 }
