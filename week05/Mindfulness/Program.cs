@@ -71,7 +71,7 @@ class Program
 
                 default:
                     Console.WriteLine("--------------------------------------------------------------------");
-                    Console.WriteLine("Invalid input. Please choose one of the following activities =/ ");
+                    Console.WriteLine("Invalid input. Please choose from 1 to 4. :D ");
                     Console.WriteLine("--------------------------------------------------------------------");
                     Console.WriteLine("");
                     break;
