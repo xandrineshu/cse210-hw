@@ -46,7 +46,7 @@ public class Activity
         _endingMessage = $"You have completed {_userSessionLengthInput} seconds of the {_activityName}. ";
 
         Console.WriteLine();
-        Console.Write("Well done! ^.^ ");
+        Console.Write("Well done! ^3^ ");
         DisplaySpinner(3);
         Console.WriteLine();
         Console.Write(_endingMessage);
