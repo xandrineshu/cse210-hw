@@ -1,4 +1,9 @@
 using System;
+// Showing Creativity and Exceeding Requirements >o<
+
+// To show creativity and exceed requirements, I tried to keep a log for how many times
+// each activities were performed. I also tried to make sure that there were no prompts repeated. 
+
 class Program
 {
     static void Main(string[] args)
