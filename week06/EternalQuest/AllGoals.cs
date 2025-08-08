@@ -65,7 +65,7 @@ class AllGoals
     public void LoadGoals()
     {
         List<string> fileGoals;
-        Console.WriteLine("> Please enter the filename you want to load: ");
+        Console.Write("> Please enter the filename you want to load: ");
         _fileName = Console.ReadLine();
 
         fileGoals = SaveLoadCSV.LoadFromCSV(_fileName);
@@ -103,7 +103,7 @@ class AllGoals
 
     public void DisplayGoalRecordEvent()
     {
-        Console.WriteLine("> The Goals are:");
+        Console.WriteLine("> Your Goals are:");
         foreach (Goal goal in _allGoals)
         {
             Console.WriteLine(string.Format($"{_allGoals.IndexOf(goal) + 1}. [{((goal.GetGoalStatus() == false) ? " " : "x")}] {goal.GetGoalName()}"));
@@ -126,7 +126,6 @@ class AllGoals
         else
         {
             Console.WriteLine("You have already completed that goal! Good job!");
-            Console.WriteLine();
         }
     }
 }
