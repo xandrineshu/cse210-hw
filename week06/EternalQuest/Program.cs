@@ -11,7 +11,6 @@ class Program
         Console.WriteLine("Hello World! This is the EternalQuest Project.");
         Console.WriteLine();
         Console.WriteLine("============== Welcome to the Goal Tracking App ==============");
-        Console.WriteLine();
 
         while (userMainMenuSelection != 6)
         {
@@ -87,15 +86,10 @@ class Program
 
                     if (userInput == "No")
                     {
-                        Console.WriteLine("Aww, that's a shame.They will not be saved :(");
+                        Console.WriteLine("Aww, that's a shame. They will not be saved :(");
+                        Console.WriteLine();
                     }
 
-                    else
-                    {
-                        Console.WriteLine("Please type Yes or No next time...");
-                    }
-
-                    Console.WriteLine();
                     Console.WriteLine("Thank you for using the Goal Tracking App! Come again soon! :3");
                     Console.WriteLine();
                     break;

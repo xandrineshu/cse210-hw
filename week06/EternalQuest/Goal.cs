@@ -67,7 +67,6 @@ public class Goal
     public string DisplayGoalDescription()
     {
         Console.Write("> What is the description of your goal? ");
-        Console.WriteLine();
         _goalDescription = Console.ReadLine();
         return _goalDescription;
     }

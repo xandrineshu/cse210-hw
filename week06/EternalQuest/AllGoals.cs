@@ -17,6 +17,7 @@ class AllGoals
 
     public void DisplayPoints(int totalPoints)
     {
+        Console.WriteLine();
         Console.WriteLine("-----------------------------------------");
         Console.WriteLine($"          Total Points: {totalPoints}             ");
         Console.WriteLine("-----------------------------------------");
@@ -47,7 +48,7 @@ class AllGoals
             return;
         }
 
-        Console.WriteLine("> Please enter the filename you want to save: ");
+        Console.Write("> Please enter the filename you want to save: ");
         _fileName = Console.ReadLine();
         string fileToSave = _fileName;
         List<string> saveGoals = new List<string>();
@@ -58,7 +59,7 @@ class AllGoals
             saveGoals.Add(goal.ToCSVRecord());
         }
         SaveLoadCSV.SaveToCSV(saveGoals, fileToSave);
-        Console.WriteLine("Goals saved! You can now load them later.");
+        Console.WriteLine("Goal Saved Successfully ^^");
     }
 
     public void LoadGoals()
@@ -66,6 +67,7 @@ class AllGoals
         List<string> fileGoals;
         Console.WriteLine("> Please enter the filename you want to load: ");
         _fileName = Console.ReadLine();
+
         fileGoals = SaveLoadCSV.LoadFromCSV(_fileName);
         _totalPoints = int.Parse(fileGoals[0]) + _totalPoints;
 
@@ -96,7 +98,7 @@ class AllGoals
                 _allGoals.Add(goal);
             }
         }
-        Console.WriteLine("Goals loaded successfully!");
+        Console.WriteLine("Goal Loaded successfully! ^^");
     }
 
     public void DisplayGoalRecordEvent()
@@ -110,6 +112,7 @@ class AllGoals
         Console.WriteLine();
         Console.Write("> Which goal did you complete? ");
         int recordEvent = int.Parse(Console.ReadLine()) - 1;
+
         Console.Clear();
         bool status = _allGoals[recordEvent].GetGoalStatus();
 
@@ -118,8 +121,8 @@ class AllGoals
             _allGoals[recordEvent].RecordEvent();
             _totalPoints += _allGoals[recordEvent].GetGoalPoints();
             Console.WriteLine(string.Format($"You now have {_totalPoints.ToString()} points!"));
-            Console.WriteLine();
         }
+
         else
         {
             Console.WriteLine("You have already completed that goal! Good job!");

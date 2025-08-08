@@ -31,7 +31,6 @@ public class CheckListGoal : Goal
         _goalPoints = int.Parse(Console.ReadLine());
 
         Console.Write("> How much is the bonus for completing this goal? ");
-        Console.WriteLine();
         _goalBonus = int.Parse(Console.ReadLine());
         return;
     }
