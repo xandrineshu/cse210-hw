@@ -52,14 +52,16 @@ class AllGoals
         _fileName = Console.ReadLine();
         string fileToSave = _fileName;
         List<string> saveGoals = new List<string>();
+
         //save points first
         saveGoals.Add(_totalPoints.ToString());
         foreach (Goal goal in _allGoals)
         {
             saveGoals.Add(goal.ToCSVRecord());
         }
+
         SaveLoadCSV.SaveToCSV(saveGoals, fileToSave);
-        Console.WriteLine("Goal Saved Successfully ^^");
+        Console.WriteLine("File Saved Successfully ^^");
     }
 
     public void LoadGoals()
