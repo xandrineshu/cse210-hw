@@ -1,4 +1,9 @@
 using System;
+// For Creativity and Exceeding core requirements
+//
+// I asked the user if they would like to save their goals before quitting. 
+// I also made sure that no additional points were rewarded if completed goals were attempted to be recorded again. 
+// 
 
 class Program
 {
